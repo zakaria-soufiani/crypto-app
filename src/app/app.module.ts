@@ -10,6 +10,8 @@ import {MdSidenavModule} from '@angular/material';
 import {MdInputModule} from '@angular/material';
 import {MdButtonModule} from '@angular/material';
 import {MdIconModule} from '@angular/material';
+import { HttpModule } from '@angular/http';
+
 
 
 
@@ -28,7 +30,8 @@ import 'hammerjs';
     MdSidenavModule,
     MdInputModule,
     MdButtonModule,
-    MdIconModule
+    MdIconModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

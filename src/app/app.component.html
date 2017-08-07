@@ -13,4 +13,12 @@
       </div>
     </md-toolbar>
   </div>
+  <div *ngIf="cryptoPrices">
+    <h2>{{this.cryptoPrices.base}}</h2>
+    <h3>Currency: {{this.cryptoPrices.target}}</h3>
+    <h3>Price: {{this.cryptoPrices.price}}</h3>
+    <h3>Volume: {{this.cryptoPrices.volume}}</h3>
+    <h3>Change: {{this.cryptoPrices.change}} %</h3>
+  </div>
 </md-sidenav-container>
+
