@@ -12,7 +12,7 @@ import 'rxjs/add/operator/do';
 export class DatabaseService {
 
   /// REPLACE WITH SPECIFIC URL FROM THE API DEPLOYED ///
-  private url = 'https://api.cryptonator.com/api/ticker/omg-usd';
+  private url = 'https://api.cryptonator.com/api/ticker/eth-usd';
 
   constructor(private http: Http) {
   }
