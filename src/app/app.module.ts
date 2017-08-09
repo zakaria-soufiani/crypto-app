@@ -16,11 +16,17 @@ import { HttpModule } from '@angular/http';
 
 
 import 'hammerjs';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+
+import {routing} from './app.routing';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,8 @@ import 'hammerjs';
     MdInputModule,
     MdButtonModule,
     MdIconModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
