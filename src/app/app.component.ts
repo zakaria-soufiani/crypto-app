@@ -1,27 +1,27 @@
 import {Component, OnInit} from '@angular/core';
 import {DatabaseService} from './database.service';
-import { IntervalObservable } from "rxjs/observable/IntervalObservable";
+import { IntervalObservable } from 'rxjs/observable/IntervalObservable';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers:[DatabaseService]
+  providers: [DatabaseService]
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'app';
   public cryptoPrices;
 
-  constructor(private database: DatabaseService){}
+  constructor(private database: DatabaseService) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.loadPrices();
-    //intervall to call api every 30 secs
+    // intervall to call api every 30 secs
     setInterval(() => this.loadPrices(), 30000);
   }
 
-  loadPrices(){
+  loadPrices() {
     this.database.getPrice()
       .subscribe(prices => this.cryptoPrices = prices.ticker);
     console.log('called')
